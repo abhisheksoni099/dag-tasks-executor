@@ -1,0 +1,10 @@
+task: t1 2
+task: t2 1
+task: t3 3
+task: t4 1
+task: t5 1
+edge: t1 -> t2
+edge: t1 -> t3
+edge: t2 -> t4
+edge: t3 -> t4
+edge: t4 -> t5
