@@ -1,5 +1,4 @@
 package com.abhisheksoni.task;
 
-public interface Task {
-    void execute();
+public interface Task extends Runnable {
 }

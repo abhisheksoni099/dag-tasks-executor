@@ -33,7 +33,7 @@ public class SerialDagExecutor implements DagExecutor {
         while (!queue.isEmpty()) {
             String currentTaskName = queue.remove();
             Task currentTask = graphData.tasksByName().get(currentTaskName);
-            currentTask.execute();
+            currentTask.run();
             graphData.adjacencyGraph().get(currentTaskName).forEach(neighbouringTask -> {
                 String neighbouringTaskName = ((BaseTask) neighbouringTask).getName();
                 int neighbouringTaskNewDependency = dependenciesByTaskName.get(neighbouringTaskName) - 1;

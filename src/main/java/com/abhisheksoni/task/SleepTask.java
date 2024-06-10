@@ -9,7 +9,7 @@ public class SleepTask extends BaseTask {
     }
 
     @Override
-    public void execute() {
+    public void run() {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append("Runing task: ");
         stringBuffer.append(name);

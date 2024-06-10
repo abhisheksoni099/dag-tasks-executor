@@ -54,8 +54,8 @@ classDiagram
 	}
 	class Task {
 		<<Interface>>
-		void execute()
 	}
+	Runnable <|-- Task
 	class BaseTask {
 		<<Abstract>>
 		String name
