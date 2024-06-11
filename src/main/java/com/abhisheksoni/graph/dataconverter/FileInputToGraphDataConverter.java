@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 
 import com.abhisheksoni.graph.model.GraphData;
 import com.abhisheksoni.task.SleepTask;
@@ -19,7 +20,7 @@ public class FileInputToGraphDataConverter implements InputToGraphDataConverter<
 
     @Override
     public GraphData toGraphData(File file) {
-        Map<String, ArrayList<Task>> adjacencyGraph = new HashMap<>();
+        Map<String, ArrayList<Task>> adjacencyGraph = new ConcurrentHashMap<>();
         Map<String, Task> tasksByName = new HashMap<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
             String line;
