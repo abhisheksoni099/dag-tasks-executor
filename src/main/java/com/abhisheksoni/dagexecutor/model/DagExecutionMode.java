@@ -1,6 +1,6 @@
 package com.abhisheksoni.dagexecutor.model;
 
-public enum ExecutorMode {
+public enum DagExecutionMode {
     SERIAL,
     PARALLEL
 }
